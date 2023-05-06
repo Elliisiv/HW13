@@ -5,18 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a0d3785e-9674-42ff-8eec-f546d6476e1c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/UserAPI/CommentDownloader.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/UserAPI/OpenTasksProgram.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/UserAPI/TestUserAPI.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/UserAPI/UserAPI.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/hw13/Comments/Comment.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/hw13/Comments/Post.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/hw13/Todos/Todos.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/hw13/UserAPI/Address.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/hw13/UserAPI/Company.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/hw13/UserAPI/Geo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/hw13/UserAPI/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/UserAPI/CommentDownloader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hw13/Comments/CommentDownloader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/UserAPI/OpenTasksProgram.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hw13/Todos/OpenTasksProgram.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/UserAPI/TestUserAPI.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/UserAPI/UserAPI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hw13/UserAPI/UserAPI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hw13/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-1-post-10-comments.json" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,18 +59,32 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Desktop/goit/HW13&quot;,
     &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;
   }
 }</component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.Main">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.hw13.Main" />
+      <module name="HW13" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.hw13.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="TodoListPrinter" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="UserAPI.TodoListPrinter" />
       <module name="HW13" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="UserAPI.*" />
+          <option name="PATTERN" value="UserAPI.dto.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -76,11 +93,11 @@
       </method>
     </configuration>
     <configuration name="UserAPI" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="UserAPI.UserAPI" />
+      <option name="MAIN_CLASS_NAME" value="UserAPI.dto.UserAPI" />
       <module name="HW13" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="UserAPI.*" />
+          <option name="PATTERN" value="UserAPI.dto.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -90,6 +107,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Main" />
         <item itemvalue="Application.TodoListPrinter" />
         <item itemvalue="Application.UserAPI" />
       </list>
@@ -105,6 +123,17 @@
       <updated>1683014701155</updated>
     </task>
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

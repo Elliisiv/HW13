@@ -1,20 +1,20 @@
-package UserAPI;
+package org.hw13.Todos;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
-import java.net.MalformedURLException;
-import java.net.ProtocolException;
 import java.net.URL;
-import java.util.Scanner;
+import java.util.ArrayList;
+import java.util.List;
 
 import org.json.*;
 
-import static UserAPI.UserAPI.START_URL;
+import static org.hw13.UserAPI.UserAPI.START_URL;
 
 public class OpenTasksProgram {
-public static void ScannerText (int userId) throws IOException, JSONException {
-    //сканере тексту за id
+
+public static List<Todos> OpenTask (int userId) throws IOException, JSONException {
+    List<Todos> openTasks = new ArrayList<>();
     URL url = new URL(START_URL + "/users/" + userId + "/todos");
     HttpURLConnection con = (HttpURLConnection) url.openConnection();
     con.setRequestMethod("GET");
@@ -32,14 +32,16 @@ public static void ScannerText (int userId) throws IOException, JSONException {
     for (int i = 0; i < tasks.length(); i++) {
         JSONObject task = tasks.getJSONObject(i);
         if (!task.getBoolean("completed")) {
-            count ++;
-            //вивід заголовка
-            System.out.println("Відкрита задача № " + count +", tittle: "+ task.getString("title"));
+            Todos openTask = new Todos();
+            openTask.setTitle(task.getString("title"));
+            openTask.setId(task.getInt("id"));
+            openTask.setUserId(task.getInt("userId"));
+            openTask.setCompleted(task.getBoolean("completed"));
+            openTasks.add(openTask);
+            System.out.println("Open task: " + openTask.getTitle());
         }
+
     }
+    return openTasks;
 }
-    public static void main(String[] args) throws Exception {
-        OpenTasksProgram otp = new OpenTasksProgram();
-        otp.ScannerText(4);
-    }
 }
